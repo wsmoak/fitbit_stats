@@ -23,6 +23,7 @@ defmodule FitbitStatsWeb.Router do
   scope "/auth", FitbitStatsWeb do
     pipe_through :browser
     get "/", AuthController, :index
+    get "/callback", AuthController, :callback
   end
 
   # Other scopes may use custom stacks.
