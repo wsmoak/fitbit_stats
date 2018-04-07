@@ -20,6 +20,11 @@ defmodule FitbitStatsWeb.Router do
     resources "/users", UserController
   end
 
+  scope "/auth", FitbitStatsWeb do
+    pipe_through :browser
+    get "/", AuthController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", FitbitStatsWeb do
   #   pipe_through :api
