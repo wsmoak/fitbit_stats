@@ -16,6 +16,6 @@ defmodule FitbitStats.Accounts.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:name, :email, :access_token, :refresh_token])
-    |> validate_required([:name, :email, :access_token, :refresh_token])
+    |> validate_required([:name, :access_token, :refresh_token])
   end
 end
